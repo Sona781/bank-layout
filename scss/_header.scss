@@ -1,0 +1,156 @@
+@import "_mixins.scss";
+
+.container {
+  width: 100%;
+  min-width: 1200px;
+  margin: 0 auto;
+}
+
+// Header top
+
+.header {
+  display: flex;
+  height: 90px;
+}
+
+.header__logo {
+  padding-top: 25px;
+  padding-left: 240px;
+}
+
+.header__nav {
+  padding-left: 427px;
+  padding-top: 40px;
+  position: relative;
+
+  .header__nav__links {
+    text-decoration: none;
+    padding-right: 47px;
+    transition: color 0.1s linear;
+    @include text(14px, bold, 24px, #777777, 0.075em);
+
+    &:hover {
+      color: #000000;
+    }
+  }
+}
+
+.header__nav::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 50px;
+  left: 390px;
+}
+
+.header__search {
+  padding-top: 43px;
+  color: #777777;
+}
+
+// Intro
+
+.intro {
+  background: url("../images/slide1.jpg") center no-repeat;
+  background-size: cover;
+  height: 650px;
+}
+
+.slider__info {
+  padding-top: 262px;
+  text-align: center;
+}
+
+.slider__name__warpper {
+  background: black;
+  width: 700px;
+  height: 55px;
+  margin: 0 auto 38px auto;
+}
+
+.slider__name {
+  @include text(48px, 300, 24px, #ffffff, 0.1em);
+  text-align: center;
+  padding-top: 13px;
+}
+
+.slider__desc {
+  @include text(18px, 300, 24px, black, 0.5em);
+  letter-spacing: 400;
+}
+
+.slider__btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+//  slider buttons
+
+.slider__btn {
+  border: 1px solid white;
+  border-radius: 50px;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+
+.slider__btn:hover {
+  border: none;
+  background: black;
+}
+
+.prev {
+  left: 112px;
+  top: 400px;
+}
+
+.next {
+  right: 112px;
+  top: 400px;
+}
+
+// arrows in buttons
+
+.arrow {
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 10px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin: 10px 5px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin: 10px 15px;
+}
+
+// dots
+
+.slider__dots {
+    display: flex;
+    margin: 190px 0 0 900px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.dot.active{
+    border: 5px black solid;
+}

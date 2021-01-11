@@ -1,0 +1,80 @@
+@import "_mixins.scss";
+
+.main {
+  background: #fafafa;
+  width: 100%;
+}
+
+// a fucking wrapper just for to margin/padding to not destroy background color
+
+.main__nav__wrapper {
+    padding-top: 60px;
+}
+
+.main__nav {
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  text-align: center;
+  margin: 0 auto 0 auto;
+  width: 1145px;
+  height: 60px;
+  padding-top: 20px;
+}
+
+.main__nav__links {
+  text-decoration: none;
+  @include text(14px, bold, 24px, #777777, 0.075em);
+  padding-left: 10px;
+  transition: color 0.1s linear;
+
+  &:hover {
+    color: black;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: #dcdcdc;
+    transform: rotate(-70deg);
+    -webkit-transform: rotate(-70deg);
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+// Photos not done yes idk how tf do this :)
+
+.main__photoline {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 32px;
+  margin-left: 380px;
+}
+
+.img10 {
+  margin-left: 195px;
+}
+
+// load more button
+
+.main__button {
+  margin-top: 35px;
+  padding-bottom: 75px;
+
+  button {
+    width: 125px;
+    height: 30px;
+    border: none;
+    background-color: #959595;
+    border-radius: 2px;
+    @include text(13px, bold, 21px, #ffff, 0.05em);
+    text-transform: uppercase;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
